@@ -14,14 +14,31 @@ st.write("Predict the type of forest cover for a land patch in Roosevelt Nationa
 with st.sidebar:
     st.header("📊 About Project")
     st.write("""
-    This machine learning model predicts one of 7 forest cover types using
-    continuous and categorical attributes from the UCI Roosevelt National Forest dataset.
-    The prediction is based on terrain, hydrology, roads, wilderness area, and soil type data.
+    Predict one of 7 forest cover types using environmental and soil attributes 
+    from the Roosevelt National Forest dataset.
+    """)
+    st.markdown("---")
+
+    st.subheader("📝 Description of Main Columns")
+    st.write("""
+    - **Elevation:** Elevation in meters  
+    - **Aspect:** Aspect in degrees azimuth  
+    - **Slope:** Slope in degrees  
+    - **Horizontal_Distance_To_Hydrology:** Horizontal distance to nearest surface water feature  
+    - **Vertical_Distance_To_Hydrology:** Vertical distance to nearest surface water feature  
+    - **Horizontal_Distance_To_Roadways:** Horizontal distance to nearest roadway  
+    - **Hillshade_9am:** Hillshade index at 9am (0 to 255)  
+    - **Hillshade_Noon:** Hillshade index at noon (0 to 255)  
+    - **Hillshade_3pm:** Hillshade index at 3pm (0 to 255)  
+    - **Horizontal_Distance_To_Fire_Points:** Horizontal distance to nearest wildfire ignition points  
+    - **Wilderness_Area:** 4 binary columns (0 = absence, 1 = presence)  
+    - **Soil_Type:** 40 binary columns (0 = absence, 1 = presence)  
+    - **Cover_Type:** Target forest cover class (1–7)  
     """)
     st.markdown("---")
     st.write("Made by Raj 🔥")
 
-# Continuous Inputs (first 10 features)
+# Continuous Inputs
 st.subheader("📝 Environmental Attributes")
 col1, col2, col3 = st.columns(3)
 
